@@ -34,7 +34,7 @@ LIMIT 2;
 SELECT `users`.`userId`, `fullName`, `email`, COUNT(`users`.`userId`) AS `lần đặt hàng`
 FROM `users`
 INNER JOIN `orders` ON users.userId = orders.userId 
-GROUP BY users.userId  -- Nhóm kết quả theo userId
+GROUP BY users.userId 
 ORDER BY COUNT(`users`.`userId`) DESC  
 LIMIT 1;
 ```
